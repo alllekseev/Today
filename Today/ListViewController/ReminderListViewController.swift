@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// TODO: make all classes final access
 class ReminderListViewController: UICollectionViewController {
     var dataSource: DataSource!
     var reminders: [Reminder] = Reminder.sampleData
