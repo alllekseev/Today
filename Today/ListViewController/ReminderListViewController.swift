@@ -6,11 +6,10 @@
 //
 
 import UIKit
-
+// TODO: make all classes final access
 class ReminderListViewController: UICollectionViewController {
-
-
     var dataSource: DataSource!
+    var reminders: [Reminder] = Reminder.sampleData
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +25,12 @@ class ReminderListViewController: UICollectionViewController {
             (
                 collectionView: UICollectionView,
                 indexPath: IndexPath,
-                itemIdentifier: String
+                itemIdentifier: Reminder.ID
             ) in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
 
-        var snashot = Snapshot()
-        snashot.appendSections([0])
-        snashot.appendItems(Reminder.sampleData.map { $0.title })
-        dataSource.apply(snashot)
+        updateSnashot()
 
         collectionView.dataSource = dataSource
     }
