@@ -40,6 +40,9 @@
 		2A2A54A82B1778910058C55D /* ReminderListViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+Actions.swift"; sourceTree = "<group>"; };
 		2A4A27B32B1857FA00D39B59 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		2A4A27B52B187CFE00D39B59 /* ReminderViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Row.swift"; sourceTree = "<group>"; };
+		4235D2BCB833079AC6B288C4 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
+		B55AE66326FDFE5043BB8395 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
+		C48968DDF9EC30533F508261 /* Pods_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				2A2A54982B1716A10058C55D /* .gitignore */,
-				2A2A54832B1711620058C55D /* Today */,
+				FFFB35D95572DFBD926E87DD /* Frameworks */,
+				F3691F7D75FF87D7B0AB5D9C /* Pods */,
 				2A2A54822B1711620058C55D /* Products */,
+				2A2A54832B1711620058C55D /* Today */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,15 +78,13 @@
 		2A2A54832B1711620058C55D /* Today */ = {
 			isa = PBXGroup;
 			children = (
-				2A4A27B22B1857DE00D39B59 /* DetailViewController */,
-				2A2A549A2B171DC40058C55D /* Models */,
 				2A2A54842B1711620058C55D /* AppDelegate.swift */,
 				2A2A54862B1711620058C55D /* SceneDelegate.swift */,
-				2A2A549F2B174EA20058C55D /* ListViewController */,
-				2A2A548A2B1711620058C55D /* Main.storyboard */,
-				2A2A548D2B1711630058C55D /* Assets.xcassets */,
-				2A2A548F2B1711630058C55D /* LaunchScreen.storyboard */,
-				2A2A54922B1711630058C55D /* Info.plist */,
+				2A6D37222B18FB29009A2AEA /* Controllers */,
+				2A6D37252B18FBAD009A2AEA /* Extensions */,
+				2A2A549A2B171DC40058C55D /* Models */,
+				2A6D37242B18FB48009A2AEA /* Storyboards */,
+				2A6D37232B18FB3B009A2AEA /* SupportedFiles */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -90,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				2A2A549B2B171DEF0058C55D /* Reminder.swift */,
-				2A2A549D2B1748450058C55D /* Date+Today.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,10 +100,10 @@
 		2A2A549F2B174EA20058C55D /* ListViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2A2A54882B1711620058C55D /* ReminderListViewController.swift */,
-				2A2A54A02B174ED80058C55D /* ReminderListViewController+DataSource.swift */,
 				2A2A54A62B1777160058C55D /* ReminderDoneButton.swift */,
+				2A2A54882B1711620058C55D /* ReminderListViewController.swift */,
 				2A2A54A82B1778910058C55D /* ReminderListViewController+Actions.swift */,
+				2A2A54A02B174ED80058C55D /* ReminderListViewController+DataSource.swift */,
 			);
 			path = ListViewController;
 			sourceTree = "<group>";
@@ -115,6 +117,58 @@
 			path = DetailViewController;
 			sourceTree = "<group>";
 		};
+		2A6D37222B18FB29009A2AEA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2A4A27B22B1857DE00D39B59 /* DetailViewController */,
+				2A2A549F2B174EA20058C55D /* ListViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2A6D37232B18FB3B009A2AEA /* SupportedFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2A2A54922B1711630058C55D /* Info.plist */,
+				2A2A548D2B1711630058C55D /* Assets.xcassets */,
+				2A2A548F2B1711630058C55D /* LaunchScreen.storyboard */,
+			);
+			path = SupportedFiles;
+			sourceTree = "<group>";
+		};
+		2A6D37242B18FB48009A2AEA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2A2A548A2B1711620058C55D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2A6D37252B18FBAD009A2AEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A2A549D2B1748450058C55D /* Date+Today.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F3691F7D75FF87D7B0AB5D9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B55AE66326FDFE5043BB8395 /* Pods-Today.debug.xcconfig */,
+				4235D2BCB833079AC6B288C4 /* Pods-Today.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FFFB35D95572DFBD926E87DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C48968DDF9EC30533F508261 /* Pods_Today.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +176,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A2A54952B1711630058C55D /* Build configuration list for PBXNativeTarget "Today" */;
 			buildPhases = (
+				2A6D37212B189E20009A2AEA /* Run Script */,
+				7AC2520F5F430AF6514F9950 /* [CP] Check Pods Manifest.lock */,
 				2A2A547D2B1711620058C55D /* Sources */,
 				2A2A547E2B1711620058C55D /* Frameworks */,
 				2A2A547F2B1711620058C55D /* Resources */,
@@ -181,6 +237,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A6D37212B189E20009A2AEA /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		7AC2520F5F430AF6514F9950 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Today-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2A2A547D2B1711620058C55D /* Sources */ = {
@@ -343,14 +442,16 @@
 		};
 		2A2A54962B1711630058C55D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B55AE66326FDFE5043BB8395 /* Pods-Today.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H94WDCFCK6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Today/Info.plist;
+				INFOPLIST_FILE = Today/SupportedFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -371,14 +472,16 @@
 		};
 		2A2A54972B1711630058C55D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4235D2BCB833079AC6B288C4 /* Pods-Today.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H94WDCFCK6;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Today/Info.plist;
+				INFOPLIST_FILE = Today/SupportedFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
