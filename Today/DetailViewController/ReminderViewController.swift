@@ -9,6 +9,7 @@ import UIKit
 // TODO: grouped files on modules (view, controllers, models, additional)
 final class ReminderViewController: UICollectionViewController {
     private typealias DataSource = UICollectionViewDiffableDataSource<Int, Row>
+    private typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Row>
 
     private var reminder: Reminder
     private var dataSource: DataSource!
@@ -38,6 +39,8 @@ final class ReminderViewController: UICollectionViewController {
                 item: itemIdentifier
             )
         }
+
+        updateSnapshot()
     }
 
     func cellRegistrationHandler(
@@ -60,5 +63,12 @@ final class ReminderViewController: UICollectionViewController {
         case .time: return reminder.dueDate.formatted(date: .omitted, time: .shortened)
         case .title: return reminder.title
         }
+    }
+
+    private func updateSnapshot() {
+        var snapshot = Snapshot()
+        snapshot.appendSections([0])
+        snapshot.appendItems([.title, .date, .time, .notes], toSection: 0)
+        dataSource.apply(snapshot)
     }
 }
