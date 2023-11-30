@@ -1,0 +1,5 @@
+included: # paths to include during linting
+    - Today
+disabled_rules:
+    - trailing_whitespace
+    - closure_parameter_position
