@@ -20,7 +20,7 @@ extension Date {
         }
     }
 
-    var dateText: String {
+    var dayText: String {
         if Locale.current.calendar.isDateInToday(self) {
             return NSLocalizedString("Today", comment: "Today due date description")
         } else if Locale.current.calendar.isDateInYesterday(self) {
