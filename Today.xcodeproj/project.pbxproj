@@ -21,6 +21,7 @@
 		2A2A54A92B1778910058C55D /* ReminderListViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2A54A82B1778910058C55D /* ReminderListViewController+Actions.swift */; };
 		2A4A27B42B1857FA00D39B59 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A27B32B1857FA00D39B59 /* ReminderViewController.swift */; };
 		2A4A27B62B187CFE00D39B59 /* ReminderViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A27B52B187CFE00D39B59 /* ReminderViewController+Row.swift */; };
+		2AA969472B1A11B10066DB14 /* generate_swiftlint_filelist.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2AA969462B1A0F950066DB14 /* generate_swiftlint_filelist.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2A2A54A82B1778910058C55D /* ReminderListViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+Actions.swift"; sourceTree = "<group>"; };
 		2A4A27B32B1857FA00D39B59 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		2A4A27B52B187CFE00D39B59 /* ReminderViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Row.swift"; sourceTree = "<group>"; };
+		2AA969462B1A0F950066DB14 /* generate_swiftlint_filelist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_swiftlint_filelist.sh; sourceTree = "<group>"; };
 		4235D2BCB833079AC6B288C4 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		B55AE66326FDFE5043BB8395 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
 		C48968DDF9EC30533F508261 /* Pods_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2A2A54922B1711630058C55D /* Info.plist */,
+				2AA969462B1A0F950066DB14 /* generate_swiftlint_filelist.sh */,
 				2A2A548D2B1711630058C55D /* Assets.xcassets */,
 				2A2A548F2B1711630058C55D /* LaunchScreen.storyboard */,
 			);
@@ -176,7 +179,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A2A54952B1711630058C55D /* Build configuration list for PBXNativeTarget "Today" */;
 			buildPhases = (
-				2A6D37212B189E20009A2AEA /* Run Script */,
+				2A6D37212B189E20009A2AEA /* SwiftLint */,
 				7AC2520F5F430AF6514F9950 /* [CP] Check Pods Manifest.lock */,
 				2A2A547D2B1711620058C55D /* Sources */,
 				2A2A547E2B1711620058C55D /* Frameworks */,
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A2A54992B1716A10058C55D /* .gitignore in Resources */,
+				2AA969472B1A11B10066DB14 /* generate_swiftlint_filelist.sh in Resources */,
 				2A2A54912B1711630058C55D /* LaunchScreen.storyboard in Resources */,
 				2A2A548E2B1711630058C55D /* Assets.xcassets in Resources */,
 				2A2A548C2B1711620058C55D /* Main.storyboard in Resources */,
@@ -239,23 +243,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A6D37212B189E20009A2AEA /* Run Script */ = {
+		2A6D37212B189E20009A2AEA /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
+				"",
 			);
 			inputPaths = (
+				"\"$(SRCROOT)\"/build/build_phases/Today_swiftlint.xcfilelist",
 			);
-			name = "Run Script";
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"\"$(SRCROOT)\"/build/build_phases/Today_swiftlint_static_output",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		7AC2520F5F430AF6514F9950 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
