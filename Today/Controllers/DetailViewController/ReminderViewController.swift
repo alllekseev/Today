@@ -34,7 +34,7 @@ final class ReminderViewController: UICollectionViewController {
         fatalError("Always initialize ReminderViewController using init(reminder:)")
     }
 
-    // MARK: - ReminderViewController Lifecycle
+    // MARK: - View Controller Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +59,20 @@ final class ReminderViewController: UICollectionViewController {
         }
 
         navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
+        navigationItem.rightBarButtonItem = editButtonItem
 
         updateSnapshotForViewing()
+    }
+
+    // MARK: - Override methods
+
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        if editing {
+            updateSnapshotForEditing()
+        } else {
+            updateSnapshotForViewing()
+        }
     }
 
     // MARK: - Cell Registration Handler
@@ -103,7 +115,7 @@ final class ReminderViewController: UICollectionViewController {
     }
 
     // MARK: - Update snapshot for viewing
-    
+
     private func updateSnapshotForViewing() {
         var snapshot = Snapshot()
         snapshot.appendSections([.view])
