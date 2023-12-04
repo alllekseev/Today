@@ -11,8 +11,8 @@ final class ReminderViewController: UICollectionViewController {
 
     // MARK: - Typealeases
 
-    private typealias DataSource = UICollectionViewDiffableDataSource<Int, Row>
-    private typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Row>
+    private typealias DataSource = UICollectionViewDiffableDataSource<Section, Row>
+    private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Row>
 
     private var reminder: Reminder
     private var dataSource: DataSource!
@@ -60,7 +60,7 @@ final class ReminderViewController: UICollectionViewController {
 
         navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
 
-        updateSnapshot()
+        updateSnapshotForViewing()
     }
 
     // MARK: - Cell Registration Handler
@@ -70,11 +70,16 @@ final class ReminderViewController: UICollectionViewController {
         indexPath: IndexPath,
         row: Row
     ) {
-        var contentConfiguration = cell.defaultContentConfiguration()
-        contentConfiguration.text = text(for: row)
-        contentConfiguration.textProperties.font = UIFont.preferredFont(forTextStyle: row.textStyle)
-        contentConfiguration.image = row.image
-        cell.contentConfiguration = contentConfiguration
+        let section = section(for: indexPath)
+        switch (section, row) {
+        case (.view, _):
+            var contentConfiguration = cell.defaultContentConfiguration()
+            contentConfiguration.text = text(for: row)
+            contentConfiguration.textProperties.font = UIFont.preferredFont(forTextStyle: row.textStyle)
+            contentConfiguration.image = row.image
+            cell.contentConfiguration = contentConfiguration
+        default: fatalError("Unexpected combination of section and row.")
+        }
         cell.tintColor = .todayPrimaryTint
     }
 
@@ -89,12 +94,28 @@ final class ReminderViewController: UICollectionViewController {
         }
     }
 
-    // MARK: - Update Snapshot
-    
-    private func updateSnapshot() {
+    // MARK: - Update snapshot for editing
+
+    private func updateSnapshotForEditing() {
         var snapshot = Snapshot()
-        snapshot.appendSections([0])
-        snapshot.appendItems([.title, .date, .time, .notes], toSection: 0)
+        snapshot.appendSections([.title, .date, .notes])
         dataSource.apply(snapshot)
+    }
+
+    // MARK: - Update snapshot for viewing
+    
+    private func updateSnapshotForViewing() {
+        var snapshot = Snapshot()
+        snapshot.appendSections([.view])
+        snapshot.appendItems([Row.title, Row.date, Row.time, Row.notes], toSection: .view)
+        dataSource.apply(snapshot)
+    }
+
+    private func section(for indexPath: IndexPath) -> Section {
+        let sectionNumber = isEditing ? indexPath.section + 1 : indexPath.section
+        guard let section = Section(rawValue: sectionNumber) else {
+            fatalError("Unable to find matching section")
+        }
+        return section
     }
 }

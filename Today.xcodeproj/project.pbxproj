@@ -21,6 +21,7 @@
 		2A2A54A92B1778910058C55D /* ReminderListViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2A54A82B1778910058C55D /* ReminderListViewController+Actions.swift */; };
 		2A4A27B42B1857FA00D39B59 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A27B32B1857FA00D39B59 /* ReminderViewController.swift */; };
 		2A4A27B62B187CFE00D39B59 /* ReminderViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A27B52B187CFE00D39B59 /* ReminderViewController+Row.swift */; };
+		2A7C01762B1DC841009A809B /* ReminderViewController+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7C01752B1DC841009A809B /* ReminderViewController+Section.swift */; };
 		2AA969472B1A11B10066DB14 /* generate_swiftlint_filelist.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2AA969462B1A0F950066DB14 /* generate_swiftlint_filelist.sh */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		2A2A54A82B1778910058C55D /* ReminderListViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+Actions.swift"; sourceTree = "<group>"; };
 		2A4A27B32B1857FA00D39B59 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		2A4A27B52B187CFE00D39B59 /* ReminderViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Row.swift"; sourceTree = "<group>"; };
+		2A7C01752B1DC841009A809B /* ReminderViewController+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Section.swift"; sourceTree = "<group>"; };
 		2AA969462B1A0F950066DB14 /* generate_swiftlint_filelist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_swiftlint_filelist.sh; sourceTree = "<group>"; };
 		4235D2BCB833079AC6B288C4 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		B55AE66326FDFE5043BB8395 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				2A4A27B32B1857FA00D39B59 /* ReminderViewController.swift */,
 				2A4A27B52B187CFE00D39B59 /* ReminderViewController+Row.swift */,
+				2A7C01752B1DC841009A809B /* ReminderViewController+Section.swift */,
 			);
 			path = DetailViewController;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7C01762B1DC841009A809B /* ReminderViewController+Section.swift in Sources */,
 				2A2A54A92B1778910058C55D /* ReminderListViewController+Actions.swift in Sources */,
 				2A2A54892B1711620058C55D /* ReminderListViewController.swift in Sources */,
 				2A2A54A12B174ED80058C55D /* ReminderListViewController+DataSource.swift in Sources */,
