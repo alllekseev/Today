@@ -2,7 +2,6 @@ $(SRCROOT)/Today/ContentViews/DatePickerContentView.swift
 $(SRCROOT)/Today/ContentViews/TextFieldContentView.swift
 $(SRCROOT)/Today/ContentViews/UIView+PinnedSubviews.swift
 $(SRCROOT)/Today/ContentViews/TextViewContentView.swift
-$(SRCROOT)/Today/ContentViews/UIContentConfiguration+Stateless.swift
 $(SRCROOT)/Today/Models/Reminder.swift
 $(SRCROOT)/Today/Extensions/Date+Today.swift
 $(SRCROOT)/Today/AppDelegate.swift
