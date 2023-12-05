@@ -1,0 +1,16 @@
+$(SRCROOT)/Today/ContentViews/DatePickerContentView.swift
+$(SRCROOT)/Today/ContentViews/TextFieldContentView.swift
+$(SRCROOT)/Today/ContentViews/UIView+PinnedSubviews.swift
+$(SRCROOT)/Today/ContentViews/TextViewContentView.swift
+$(SRCROOT)/Today/Models/Reminder.swift
+$(SRCROOT)/Today/Extensions/Date+Today.swift
+$(SRCROOT)/Today/AppDelegate.swift
+$(SRCROOT)/Today/Controllers/ListViewController/ReminderListViewController+DataSource.swift
+$(SRCROOT)/Today/Controllers/ListViewController/ReminderDoneButton.swift
+$(SRCROOT)/Today/Controllers/ListViewController/ReminderListViewController+Actions.swift
+$(SRCROOT)/Today/Controllers/ListViewController/ReminderListViewController.swift
+$(SRCROOT)/Today/Controllers/DetailViewController/ReminderViewController+CellConfiguration.swift
+$(SRCROOT)/Today/Controllers/DetailViewController/ReminderViewController.swift
+$(SRCROOT)/Today/Controllers/DetailViewController/ReminderViewController+Row.swift
+$(SRCROOT)/Today/Controllers/DetailViewController/ReminderViewController+Section.swift
+$(SRCROOT)/Today/SceneDelegate.swift
