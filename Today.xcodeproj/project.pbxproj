@@ -21,6 +21,9 @@
 		2A2A54A92B1778910058C55D /* ReminderListViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2A54A82B1778910058C55D /* ReminderListViewController+Actions.swift */; };
 		2A4A27B42B1857FA00D39B59 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A27B32B1857FA00D39B59 /* ReminderViewController.swift */; };
 		2A4A27B62B187CFE00D39B59 /* ReminderViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A27B52B187CFE00D39B59 /* ReminderViewController+Row.swift */; };
+		2A6B4BA22B30641200A70985 /* MainScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6B4B9F2B30641200A70985 /* MainScreen.png */; };
+		2A6B4BA32B30641200A70985 /* DetailScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6B4BA02B30641200A70985 /* DetailScreen.png */; };
+		2A6B4BA42B30641200A70985 /* EditingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6B4BA12B30641200A70985 /* EditingScreen.png */; };
 		2A7C01762B1DC841009A809B /* ReminderViewController+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7C01752B1DC841009A809B /* ReminderViewController+Section.swift */; };
 		2A7C01782B1DE957009A809B /* ReminderViewController+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7C01772B1DE957009A809B /* ReminderViewController+CellConfiguration.swift */; };
 		2A7C017C2B1E05D8009A809B /* UIView+PinnedSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7C017B2B1E05D8009A809B /* UIView+PinnedSubviews.swift */; };
@@ -47,6 +50,10 @@
 		2A2A54A82B1778910058C55D /* ReminderListViewController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+Actions.swift"; sourceTree = "<group>"; };
 		2A4A27B32B1857FA00D39B59 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		2A4A27B52B187CFE00D39B59 /* ReminderViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Row.swift"; sourceTree = "<group>"; };
+		2A6B4B9D2B3062CC00A70985 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2A6B4B9F2B30641200A70985 /* MainScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen.png; sourceTree = "<group>"; };
+		2A6B4BA02B30641200A70985 /* DetailScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailScreen.png; sourceTree = "<group>"; };
+		2A6B4BA12B30641200A70985 /* EditingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditingScreen.png; sourceTree = "<group>"; };
 		2A7C01752B1DC841009A809B /* ReminderViewController+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Section.swift"; sourceTree = "<group>"; };
 		2A7C01772B1DE957009A809B /* ReminderViewController+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+CellConfiguration.swift"; sourceTree = "<group>"; };
 		2A7C017B2B1E05D8009A809B /* UIView+PinnedSubviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubviews.swift"; sourceTree = "<group>"; };
@@ -73,6 +80,8 @@
 		2A2A54782B1711620058C55D = {
 			isa = PBXGroup;
 			children = (
+				2A6B4B9E2B30637C00A70985 /* Images */,
+				2A6B4B9D2B3062CC00A70985 /* README.md */,
 				2A2A54982B1716A10058C55D /* .gitignore */,
 				FFFB35D95572DFBD926E87DD /* Frameworks */,
 				F3691F7D75FF87D7B0AB5D9C /* Pods */,
@@ -132,6 +141,16 @@
 				2A7C01772B1DE957009A809B /* ReminderViewController+CellConfiguration.swift */,
 			);
 			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		2A6B4B9E2B30637C00A70985 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2A6B4B9F2B30641200A70985 /* MainScreen.png */,
+				2A6B4BA02B30641200A70985 /* DetailScreen.png */,
+				2A6B4BA12B30641200A70985 /* EditingScreen.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		2A6D37222B18FB29009A2AEA /* Controllers */ = {
@@ -259,7 +278,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A2A54992B1716A10058C55D /* .gitignore in Resources */,
+				2A6B4BA32B30641200A70985 /* DetailScreen.png in Resources */,
+				2A6B4BA22B30641200A70985 /* MainScreen.png in Resources */,
 				2AA969472B1A11B10066DB14 /* generate_swiftlint_filelist.sh in Resources */,
+				2A6B4BA42B30641200A70985 /* EditingScreen.png in Resources */,
 				2A2A54912B1711630058C55D /* LaunchScreen.storyboard in Resources */,
 				2A2A548E2B1711630058C55D /* Assets.xcassets in Resources */,
 				2A2A548C2B1711620058C55D /* Main.storyboard in Resources */,
