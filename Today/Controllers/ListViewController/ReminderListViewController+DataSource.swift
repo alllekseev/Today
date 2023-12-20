@@ -35,6 +35,7 @@ extension ReminderListViewController {
             snashot.reloadItems(ids)
         }
         dataSource.apply(snashot)
+        headerView?.progress = progress
     }
 
     // MARK: - Cell Registration Handler

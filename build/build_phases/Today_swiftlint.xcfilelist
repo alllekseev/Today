@@ -10,6 +10,7 @@ $(SRCROOT)/Today/Controllers/ListViewController/ReminderListViewController+DataS
 $(SRCROOT)/Today/Controllers/ListViewController/ReminderDoneButton.swift
 $(SRCROOT)/Today/Controllers/ListViewController/ReminderListViewController+Actions.swift
 $(SRCROOT)/Today/Controllers/ListViewController/ReminderListViewController.swift
+$(SRCROOT)/Today/Controllers/ListViewController/ProgressHeaderView.swift
 $(SRCROOT)/Today/Controllers/DetailViewController/ReminderViewController+CellConfiguration.swift
 $(SRCROOT)/Today/Controllers/DetailViewController/ReminderViewController.swift
 $(SRCROOT)/Today/Controllers/DetailViewController/ReminderViewController+Row.swift

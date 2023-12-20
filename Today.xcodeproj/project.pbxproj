@@ -32,6 +32,7 @@
 		2AA969472B1A11B10066DB14 /* generate_swiftlint_filelist.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2AA969462B1A0F950066DB14 /* generate_swiftlint_filelist.sh */; };
 		2AD188F52B33154900CF27E6 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD188F42B33154900CF27E6 /* ReminderListStyle.swift */; };
 		2AD188F72B331FDA00CF27E6 /* MainScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD188F62B331FDA00CF27E6 /* MainScreen.png */; };
+		2AD188F92B3323F600CF27E6 /* ProgressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD188F82B3323F600CF27E6 /* ProgressHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		2AA969462B1A0F950066DB14 /* generate_swiftlint_filelist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_swiftlint_filelist.sh; sourceTree = "<group>"; };
 		2AD188F42B33154900CF27E6 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
 		2AD188F62B331FDA00CF27E6 /* MainScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen.png; sourceTree = "<group>"; };
+		2AD188F82B3323F600CF27E6 /* ProgressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderView.swift; sourceTree = "<group>"; };
 		4235D2BCB833079AC6B288C4 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		B55AE66326FDFE5043BB8395 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
 		C48968DDF9EC30533F508261 /* Pods_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 				2A2A54882B1711620058C55D /* ReminderListViewController.swift */,
 				2A2A54A82B1778910058C55D /* ReminderListViewController+Actions.swift */,
 				2A2A54A02B174ED80058C55D /* ReminderListViewController+DataSource.swift */,
+				2AD188F82B3323F600CF27E6 /* ProgressHeaderView.swift */,
 			);
 			path = ListViewController;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				2A2A54872B1711620058C55D /* SceneDelegate.swift in Sources */,
 				2A2A54A72B1777160058C55D /* ReminderDoneButton.swift in Sources */,
 				2A7C017E2B1E0A39009A809B /* TextFieldContentView.swift in Sources */,
+				2AD188F92B3323F600CF27E6 /* ProgressHeaderView.swift in Sources */,
 				2A2A549C2B171DEF0058C55D /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
