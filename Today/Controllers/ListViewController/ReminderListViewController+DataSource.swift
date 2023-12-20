@@ -26,10 +26,11 @@ extension ReminderListViewController {
 
     // MARK: - Update snaphot method
 
-    func updateSnapshot(reloading ids: [Reminder.ID] = []) {
+    func updateSnapshot(reloading idsThatChanged: [Reminder.ID] = []) {
+        let ids = idsThatChanged.filter { id in filteredReminders.contains(where: { $0.id == id }) }
         var snashot = Snapshot()
         snashot.appendSections([0])
-        snashot.appendItems(reminders.map { $0.id })
+        snashot.appendItems(filteredReminders.map { $0.id })
         if !ids.isEmpty {
             snashot.reloadItems(ids)
         }
@@ -91,6 +92,16 @@ extension ReminderListViewController {
         updateReminder(reminder)
         updateSnapshot()
         updateSnapshot(reloading: [id])
+    }
+
+
+    func addReminder(_ reminder: Reminder) {
+        reminders.append(reminder)
+    }
+
+    func deleteReminder(withId id: Reminder.ID) {
+        let index = reminders.indexOfReminder(withId: id)
+        reminders.remove(at: index)
     }
 
     // MARK: - Done Button's methods
