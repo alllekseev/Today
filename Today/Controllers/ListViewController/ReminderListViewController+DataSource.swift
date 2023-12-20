@@ -93,6 +93,11 @@ extension ReminderListViewController {
         updateSnapshot(reloading: [id])
     }
 
+
+    func addReminder(_ reminder: Reminder) {
+        reminders.append(reminder)
+    }
+
     // MARK: - Done Button's methods
 
     private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction {

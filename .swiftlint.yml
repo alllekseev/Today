@@ -3,3 +3,4 @@ included: # paths to include during linting
 disabled_rules:
     - trailing_whitespace
     - closure_parameter_position
+    - trailing_comma
