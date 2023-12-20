@@ -13,6 +13,19 @@ final class ReminderListViewController: UICollectionViewController {
 
     var dataSource: DataSource!
     var reminders: [Reminder] = Reminder.sampleData
+    var listStyle: ReminderListStyle = .today
+    var filteredReminders: [Reminder] {
+        return reminders.filter {
+            listStyle.shouldInclude(date: $0.dueDate)
+        }.sorted {
+            $0.dueDate < $1.dueDate
+        }
+    }
+    let listStyleSegmentedControll = UISegmentedControl(items: [
+        ReminderListStyle.today.name,
+        ReminderListStyle.future.name,
+        ReminderListStyle.all.name,
+    ])
 
     // MARK: - ReminderListViewController lifecycle method
 
@@ -47,6 +60,11 @@ final class ReminderListViewController: UICollectionViewController {
             comment: "Add button accessibility label"
         )
         navigationItem.rightBarButtonItem = addButton
+
+        listStyleSegmentedControll.selectedSegmentIndex = listStyle.rawValue
+        listStyleSegmentedControll.addTarget(self, action: #selector(didChangeListStyle), for: .valueChanged)
+        navigationItem.titleView = listStyleSegmentedControll
+
         if #available(iOS 16, *) {
             navigationItem.style = .navigator
         }
@@ -62,7 +80,7 @@ final class ReminderListViewController: UICollectionViewController {
         _ collectionView: UICollectionView,
         shouldSelectItemAt indexPath: IndexPath
     ) -> Bool {
-        let id  = reminders[indexPath.item].id
+        let id  = filteredReminders[indexPath.item].id
         pushDetailViewForReminder(with: id)
         return false
     }
