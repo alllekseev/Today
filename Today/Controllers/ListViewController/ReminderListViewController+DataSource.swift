@@ -98,6 +98,11 @@ extension ReminderListViewController {
         reminders.append(reminder)
     }
 
+    func deleteReminder(withId id: Reminder.ID) {
+        let index = reminders.indexOfReminder(withId: id)
+        reminders.remove(at: index)
+    }
+
     // MARK: - Done Button's methods
 
     private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction {
