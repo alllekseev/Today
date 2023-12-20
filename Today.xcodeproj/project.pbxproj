@@ -21,7 +21,6 @@
 		2A2A54A92B1778910058C55D /* ReminderListViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2A54A82B1778910058C55D /* ReminderListViewController+Actions.swift */; };
 		2A4A27B42B1857FA00D39B59 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A27B32B1857FA00D39B59 /* ReminderViewController.swift */; };
 		2A4A27B62B187CFE00D39B59 /* ReminderViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A27B52B187CFE00D39B59 /* ReminderViewController+Row.swift */; };
-		2A6B4BA22B30641200A70985 /* MainScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6B4B9F2B30641200A70985 /* MainScreen.png */; };
 		2A6B4BA32B30641200A70985 /* DetailScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6B4BA02B30641200A70985 /* DetailScreen.png */; };
 		2A6B4BA42B30641200A70985 /* EditingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6B4BA12B30641200A70985 /* EditingScreen.png */; };
 		2A7C01762B1DC841009A809B /* ReminderViewController+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7C01752B1DC841009A809B /* ReminderViewController+Section.swift */; };
@@ -32,6 +31,7 @@
 		2A7C01842B1E4A59009A809B /* DatePickerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7C01832B1E4A59009A809B /* DatePickerContentView.swift */; };
 		2AA969472B1A11B10066DB14 /* generate_swiftlint_filelist.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2AA969462B1A0F950066DB14 /* generate_swiftlint_filelist.sh */; };
 		2AD188F52B33154900CF27E6 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD188F42B33154900CF27E6 /* ReminderListStyle.swift */; };
+		2AD188F72B331FDA00CF27E6 /* MainScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD188F62B331FDA00CF27E6 /* MainScreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +52,6 @@
 		2A4A27B32B1857FA00D39B59 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		2A4A27B52B187CFE00D39B59 /* ReminderViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Row.swift"; sourceTree = "<group>"; };
 		2A6B4B9D2B3062CC00A70985 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2A6B4B9F2B30641200A70985 /* MainScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen.png; sourceTree = "<group>"; };
 		2A6B4BA02B30641200A70985 /* DetailScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DetailScreen.png; sourceTree = "<group>"; };
 		2A6B4BA12B30641200A70985 /* EditingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditingScreen.png; sourceTree = "<group>"; };
 		2A7C01752B1DC841009A809B /* ReminderViewController+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Section.swift"; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		2A7C01832B1E4A59009A809B /* DatePickerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerContentView.swift; sourceTree = "<group>"; };
 		2AA969462B1A0F950066DB14 /* generate_swiftlint_filelist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_swiftlint_filelist.sh; sourceTree = "<group>"; };
 		2AD188F42B33154900CF27E6 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
+		2AD188F62B331FDA00CF27E6 /* MainScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen.png; sourceTree = "<group>"; };
 		4235D2BCB833079AC6B288C4 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		B55AE66326FDFE5043BB8395 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
 		C48968DDF9EC30533F508261 /* Pods_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +149,7 @@
 		2A6B4B9E2B30637C00A70985 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				2A6B4B9F2B30641200A70985 /* MainScreen.png */,
+				2AD188F62B331FDA00CF27E6 /* MainScreen.png */,
 				2A6B4BA02B30641200A70985 /* DetailScreen.png */,
 				2A6B4BA12B30641200A70985 /* EditingScreen.png */,
 			);
@@ -280,9 +280,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AD188F72B331FDA00CF27E6 /* MainScreen.png in Resources */,
 				2A2A54992B1716A10058C55D /* .gitignore in Resources */,
 				2A6B4BA32B30641200A70985 /* DetailScreen.png in Resources */,
-				2A6B4BA22B30641200A70985 /* MainScreen.png in Resources */,
 				2AA969472B1A11B10066DB14 /* generate_swiftlint_filelist.sh in Resources */,
 				2A6B4BA42B30641200A70985 /* EditingScreen.png in Resources */,
 				2A2A54912B1711630058C55D /* LaunchScreen.storyboard in Resources */,
