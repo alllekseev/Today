@@ -35,6 +35,7 @@ extension ReminderListViewController {
             snashot.reloadItems(ids)
         }
         dataSource.apply(snashot)
+        headerView?.progress = progress
     }
 
     // MARK: - Cell Registration Handler
@@ -94,7 +95,6 @@ extension ReminderListViewController {
         updateSnapshot(reloading: [id])
     }
 
-
     func addReminder(_ reminder: Reminder) {
         reminders.append(reminder)
     }
@@ -120,7 +120,7 @@ extension ReminderListViewController {
     private func doneButtonConfiguration(
         for reminder: Reminder
     ) -> UICellAccessory.CustomViewConfiguration {
-        let symbolName = reminder.isComplete ? "circle.fill" : "circle"
+        let symbolName = reminder.isComplete ? "checkmark.circle.fill" : "circle"
         let symbolConfiguration = UIImage.SymbolConfiguration(textStyle: .title1)
         let image = UIImage(
             systemName: symbolName,
