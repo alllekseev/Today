@@ -24,6 +24,8 @@ extension ReminderListViewController {
         NSLocalizedString("Not completed", comment: "Reminder not completed value")
     }
 
+    private var reminderStore: ReminderStore { ReminderStore.shared }
+
     // MARK: - Update snaphot method
 
     func updateSnapshot(reloading idsThatChanged: [Reminder.ID] = []) {
@@ -69,7 +71,6 @@ extension ReminderListViewController {
         ]
 
         // MARK: Cell's Background
-
         var backgroundConfiguration = UIBackgroundConfiguration.listGroupedCell()
         backgroundConfiguration.backgroundColor = .todayListCellBackground
         cell.backgroundConfiguration = backgroundConfiguration
@@ -104,6 +105,24 @@ extension ReminderListViewController {
         reminders.remove(at: index)
     }
 
+    // MARK: - Prepare Reminder Store
+
+    func prepareReminderStore() {
+        Task {
+            do {
+                try await reminderStore.requestAccess()
+                reminders = try await reminderStore.readAll()
+            } catch TodayError.accessDenied, TodayError.accessRestricted {
+                #if DEBUG
+                reminders = Reminder.sampleData
+                #endif
+            } catch {
+                showError(error)
+            }
+            updateSnapshot()
+        }
+    }
+
     // MARK: - Done Button's methods
 
     private func doneButtonAccessibilityAction(for reminder: Reminder) -> UIAccessibilityCustomAction {
@@ -116,6 +135,8 @@ extension ReminderListViewController {
         }
         return action
     }
+
+    // MARK: - Done Button Configuration
 
     private func doneButtonConfiguration(
         for reminder: Reminder

@@ -12,7 +12,7 @@ final class ReminderListViewController: UICollectionViewController {
     // MARK: - Properties
 
     var dataSource: DataSource!
-    var reminders: [Reminder] = Reminder.sampleData
+    var reminders: [Reminder] = []
     var listStyle: ReminderListStyle = .today
     var filteredReminders: [Reminder] {
         return reminders.filter {
@@ -94,6 +94,8 @@ final class ReminderListViewController: UICollectionViewController {
         updateSnapshot()
 
         collectionView.dataSource = dataSource
+
+        prepareReminderStore()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -126,6 +128,8 @@ final class ReminderListViewController: UICollectionViewController {
         progressView.progress = progress
     }
 
+    // MARK: - Refresh Background
+
     func refreshBackground() {
         collectionView.backgroundView = nil
         let backgroundView = UIView()
@@ -143,6 +147,27 @@ final class ReminderListViewController: UICollectionViewController {
             self?.updateSnapshot(reloading: [reminder.id])
         }
         navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    // MARK: - Show Error
+
+    func showError(_ error: Error) {
+        let alertTitle = NSLocalizedString("Error", comment: "Error alert title")
+        let alert = UIAlertController(
+            title: alertTitle,
+            message: error.localizedDescription,
+            preferredStyle: .alert
+        )
+        let actionTitle = NSLocalizedString("OK", comment: "Alert OK button title")
+        alert.addAction(
+            UIAlertAction(
+                title: actionTitle,
+                style: .cancel
+            ) {
+                [weak self] _ in self?.dismiss(animated: true)
+            }
+        )
+        present(alert, animated: true)
     }
 
     // MARK: - Configuration layout method
