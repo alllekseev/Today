@@ -33,6 +33,7 @@
 		2AD188F52B33154900CF27E6 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD188F42B33154900CF27E6 /* ReminderListStyle.swift */; };
 		2AD188F72B331FDA00CF27E6 /* MainScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AD188F62B331FDA00CF27E6 /* MainScreen.png */; };
 		2AD188F92B3323F600CF27E6 /* ProgressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD188F82B3323F600CF27E6 /* ProgressHeaderView.swift */; };
+		2AF8DB2D2B342C46001984B3 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF8DB2C2B342C46001984B3 /* CAGradientLayer+ListStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		2AD188F42B33154900CF27E6 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
 		2AD188F62B331FDA00CF27E6 /* MainScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreen.png; sourceTree = "<group>"; };
 		2AD188F82B3323F600CF27E6 /* ProgressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderView.swift; sourceTree = "<group>"; };
+		2AF8DB2C2B342C46001984B3 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
 		4235D2BCB833079AC6B288C4 /* Pods-Today.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.release.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.release.xcconfig"; sourceTree = "<group>"; };
 		B55AE66326FDFE5043BB8395 /* Pods-Today.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Today.debug.xcconfig"; path = "Target Support Files/Pods-Today/Pods-Today.debug.xcconfig"; sourceTree = "<group>"; };
 		C48968DDF9EC30533F508261 /* Pods_Today.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Today.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 			children = (
 				2A2A549B2B171DEF0058C55D /* Reminder.swift */,
 				2AD188F42B33154900CF27E6 /* ReminderListStyle.swift */,
+				2AF8DB2C2B342C46001984B3 /* CAGradientLayer+ListStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				2A7C01842B1E4A59009A809B /* DatePickerContentView.swift in Sources */,
 				2A2A54A92B1778910058C55D /* ReminderListViewController+Actions.swift in Sources */,
 				2A2A54892B1711620058C55D /* ReminderListViewController.swift in Sources */,
+				2AF8DB2D2B342C46001984B3 /* CAGradientLayer+ListStyle.swift in Sources */,
 				2A2A54A12B174ED80058C55D /* ReminderListViewController+DataSource.swift in Sources */,
 				2A7C017C2B1E05D8009A809B /* UIView+PinnedSubviews.swift in Sources */,
 				2A2A549E2B1748450058C55D /* Date+Today.swift in Sources */,

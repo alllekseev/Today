@@ -36,7 +36,7 @@ final class ReminderListViewController: UICollectionViewController {
         return progress
     }
 
-    // MARK: -  Lifecycle method
+    // MARK: - Lifecycle method
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,10 +65,7 @@ final class ReminderListViewController: UICollectionViewController {
             elementKind: ProgressHeaderView.elementKind,
             handler: supplementaryRegistrationHandler
         )
-        dataSource.supplementaryViewProvider = {
-            supplementaryView,
-            elementKind,
-            indexPath in
+        dataSource.supplementaryViewProvider = { _, _, indexPath in
             return self.collectionView.dequeueConfiguredReusableSupplementary(
                 using: headerRegistration,
                 for: indexPath
@@ -99,6 +96,11 @@ final class ReminderListViewController: UICollectionViewController {
         collectionView.dataSource = dataSource
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshBackground()
+    }
+
     // MARK: - Override CollectionView methods
 
     override func collectionView(
@@ -122,6 +124,14 @@ final class ReminderListViewController: UICollectionViewController {
         }
 
         progressView.progress = progress
+    }
+
+    func refreshBackground() {
+        collectionView.backgroundView = nil
+        let backgroundView = UIView()
+        let gradientLayer = CAGradientLayer.gradienLayer(for: listStyle, in: collectionView.frame)
+        backgroundView.layer.addSublayer(gradientLayer)
+        collectionView.backgroundView = backgroundView
     }
 
     // MARK: - NavigationController method
