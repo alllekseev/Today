@@ -125,6 +125,7 @@ final class ReminderListViewController: UICollectionViewController {
             return
         }
 
+        view.frame.size.height = view.frame.size.width
         progressView.progress = progress
     }
 
@@ -173,7 +174,7 @@ final class ReminderListViewController: UICollectionViewController {
     // MARK: - Configuration layout method
 
     private func listLayout() -> UICollectionViewCompositionalLayout {
-        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
+        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         listConfiguration.headerMode = .supplementary
         listConfiguration.showsSeparators = false
         listConfiguration.trailingSwipeActionsConfigurationProvider = makeSwipeActions
