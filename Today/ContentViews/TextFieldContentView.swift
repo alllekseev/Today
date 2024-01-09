@@ -46,7 +46,7 @@ final class TextFieldContentView: UIView, UIContentView {
         )
         textField.clearButtonMode = .whileEditing
         textField.addTarget(self, action: #selector(didChange(_:)), for: .editingChanged)
-
+        textField.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -61,6 +61,14 @@ final class TextFieldContentView: UIView, UIContentView {
     @objc private func didChange(_ sender: UITextField) {
         guard let configuration = configuration as? TextFieldContentView.Configuration else { return }
         configuration.onChange(textField.text ?? "")
+    }
+}
+
+extension TextFieldContentView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+
+        return true
     }
 }
 

@@ -12,7 +12,7 @@ final class ReminderListViewController: UICollectionViewController {
     // MARK: - Properties
 
     var dataSource: DataSource!
-    var reminders: [Reminder] = Reminder.sampleData
+    var reminders: [Reminder] = []
     var listStyle: ReminderListStyle = .today
     var filteredReminders: [Reminder] {
         return reminders.filter {
@@ -94,6 +94,8 @@ final class ReminderListViewController: UICollectionViewController {
         updateSnapshot()
 
         collectionView.dataSource = dataSource
+
+        prepareReminderStore()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -123,8 +125,11 @@ final class ReminderListViewController: UICollectionViewController {
             return
         }
 
+        view.frame.size.height = view.frame.size.width
         progressView.progress = progress
     }
+
+    // MARK: - Refresh Background
 
     func refreshBackground() {
         collectionView.backgroundView = nil
@@ -145,10 +150,31 @@ final class ReminderListViewController: UICollectionViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 
+    // MARK: - Show Error
+
+    func showError(_ error: Error) {
+        let alertTitle = NSLocalizedString("Error", comment: "Error alert title")
+        let alert = UIAlertController(
+            title: alertTitle,
+            message: error.localizedDescription,
+            preferredStyle: .alert
+        )
+        let actionTitle = NSLocalizedString("OK", comment: "Alert OK button title")
+        alert.addAction(
+            UIAlertAction(
+                title: actionTitle,
+                style: .cancel
+            ) {
+                [weak self] _ in self?.dismiss(animated: true)
+            }
+        )
+        present(alert, animated: true)
+    }
+
     // MARK: - Configuration layout method
 
     private func listLayout() -> UICollectionViewCompositionalLayout {
-        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
+        var listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         listConfiguration.headerMode = .supplementary
         listConfiguration.showsSeparators = false
         listConfiguration.trailingSwipeActionsConfigurationProvider = makeSwipeActions
