@@ -38,6 +38,7 @@ extension ReminderViewController {
         contentConfiguration.text = title
         contentConfiguration.onChange = { [weak self] title in
             self?.workingReminder.title = title
+//            self?.disabledDoneButton(for: title.isEmpty)
         }
         return contentConfiguration
     }

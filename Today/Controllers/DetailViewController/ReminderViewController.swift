@@ -75,6 +75,7 @@ final class ReminderViewController: UICollectionViewController {
 
         navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
         navigationItem.rightBarButtonItem = editButtonItem
+//        disabledDoneButton(for: reminder.title.isEmpty)
 
         updateSnapshotForViewing()
     }
@@ -123,6 +124,7 @@ final class ReminderViewController: UICollectionViewController {
     @objc private func didCancelEdit() {
         workingReminder = reminder
         setEditing(false, animated: true)
+//        navigationItem.rightBarButtonItem?.isEnabled = true
     }
 
     // MARK: - Prepare for editing
@@ -175,6 +177,14 @@ final class ReminderViewController: UICollectionViewController {
         dataSource.apply(snapshot)
     }
 
+    // MARK: - Disable Done Button
+
+    func disabledDoneButton(for emptyTitle: Bool) {
+        navigationItem.rightBarButtonItem?.isEnabled = !emptyTitle
+    }
+
+    // MARK: - Defining section for indexPath
+    
     private func section(for indexPath: IndexPath) -> Section {
         let sectionNumber = isEditing ? indexPath.section + 1 : indexPath.section
         guard let section = Section(rawValue: sectionNumber) else {
